@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Jota</a></div>
+            <ul class="links">
+                <li><a href="inicio">Início</a></li>
+                <li><a href="sobre">Classificação</a></li>
+                <li><a href="servicos">Calendário</a></li>
+                <li><a href="contato">Pilotos</a></li>
+            </ul>
+            <a href="#" class="action_btn">Login</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="inicio">Início</a></li>
+            <li><a href="sobre">Classificação</a></li>
+            <li><a href="servicos">Calendário</a></li>
+            <li><a href="contato">Pilotos</a></li>
+            <li><a href="#" class="action_btn">Login</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Bem-vindo!</h1>
+            <p><span>Acompanhe nossa temporada de 2024 no<span>
+                <br>
+            Campeonato Mundial de Endurancec da FIA</p>
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/e42a9cbd70.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>
